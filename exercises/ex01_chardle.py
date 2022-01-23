@@ -18,4 +18,5 @@ if single_character == five_character_word[3]:
     print(single_character + " found at index 3")
 if single_character == five_character_word[4]:
     print(single_character + " found at index 4")
-    
+
+frequency: int = 0
