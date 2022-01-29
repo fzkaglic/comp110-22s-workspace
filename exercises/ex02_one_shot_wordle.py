@@ -3,10 +3,14 @@
 __author__ = "730501608"
 
 secret_word: str = "python"
-guess: str = input("What is your 6-letter guess? ")
+guess: str = input(f"What is your {len(secret_word)}-letter guess? ") 
+# the user is prompted for input
 
 while int(len(guess)) != int(len(secret_word)):
-    guess: str = input("That was not 6 letters! Try again: ")
+    guess = input(f"That was not {len(secret_word)} letters! Try again: ")
+# if the user inputs a word with the incorrect number of letters
+# the while loop will continue prompting the user for input until
+# they enter a word with the correct letter length
 
 if guess == secret_word:
     print("Woo! You got it!")
@@ -26,5 +30,14 @@ while i < int(len(secret_word)):
     else:
         emoji = emoji + WHITE_BOX
     i = i + 1
+
+# the while loop tests whether the index of the guess
+# match the index of the secret word
+# a green box will print if the index of the guess
+# matches the corresponding index of the secret word
+# a yellow box will print if the index of the guess
+# appears in the secret word at a different index
+# a white box will print if the index of the guess
+# does not appear at all within the secret word
 
 print(emoji)
