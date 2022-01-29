@@ -12,3 +12,19 @@ if guess == secret_word:
     print("Woo! You got it!")
 else:
     print("Not quite. Play again soon!")
+
+WHITE_BOX: str = "\U00002B1C"
+GREEN_BOX: str = "\U0001F7E9"
+YELLOW_BOX: str = "\U0001F7E8"
+
+i: int = 0
+emoji: str = ""
+
+while i < int(len(secret_word)):
+    if guess[i] == secret_word[i]:
+        emoji = emoji + GREEN_BOX
+    else:
+        emoji = emoji + WHITE_BOX
+    i = i + 1
+
+print(emoji)
