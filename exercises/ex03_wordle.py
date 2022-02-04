@@ -19,6 +19,7 @@ def contains_char(search_word: str, single_character: str) -> bool:
     else:
         return False
 
+
 # contains_char is a function that tests whether the single character
 # of the second parameter is found within the search word of the first parameter
 # if so, the function will return True
@@ -43,3 +44,21 @@ def emojified(guess: str, secret: str) -> str:
                 emoji = emoji + WHITE_BOX
         i = i + 1
     return emoji
+
+
+# green boxes indicate that the index of the guess matches that of the secret
+# yellow boxes indicate that the index of the guess is found at a different index of the secret
+# white boxes indicate that the index of the guess is not found within the secret
+
+
+def input_guess(expected_length: int) -> str:
+    """Prompts the user for a guess of the expected length."""
+    guess: str = input(f"Enter a {expected_length} character word: ")
+    while int(len(guess)) != expected_length:
+        guess = input(f"That was not {expected_length} chars! Try again: ")
+    return guess
+
+
+
+
+        
