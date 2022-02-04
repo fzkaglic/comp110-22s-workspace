@@ -59,6 +59,9 @@ def input_guess(expected_length: int) -> str:
     return guess
 
 
+# input_guess is a function that will prompt the user for a guess that matches
+# expected_length, and it will continue to do so until the user gets it right
+
 
 
         
