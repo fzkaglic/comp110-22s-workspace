@@ -18,3 +18,28 @@ def contains_char(search_word: str, single_character: str) -> bool:
         return True
     else:
         return False
+
+# contains_char is a function that tests whether the single character
+# of the second parameter is found within the search word of the first parameter
+# if so, the function will return True
+# if not, the function will return False
+
+
+def emojified(guess: str, secret: str) -> str:
+    """Returns a string of emojis that shows the relations between indices of guess and secret."""
+    assert len(guess) == len(secret)
+    WHITE_BOX: str = "\U00002B1C"
+    GREEN_BOX: str = "\U0001F7E9"
+    YELLOW_BOX: str = "\U0001F7E8"
+    i: int = 0
+    emoji: str = ""
+    while i < int(len(guess)) and int(len(secret)):
+        if guess[i] == secret[i]:
+            emoji = emoji + GREEN_BOX
+        else:
+            if contains_char(secret, guess[i]) is True:
+                emoji = emoji + YELLOW_BOX
+            else:
+                emoji = emoji + WHITE_BOX
+        i = i + 1
+    return emoji
