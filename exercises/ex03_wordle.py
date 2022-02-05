@@ -63,5 +63,26 @@ def input_guess(expected_length: int) -> str:
 # expected_length, and it will continue to do so until the user gets it right
 
 
+def main() -> None:
+    """The entrypoint of the program and main game loop."""
+    secret: str = "codes"
+    turn_number: int = 1
+    victory: bool = False
+    while victory is not True and turn_number <= 6:
+        print(f"=== Turn {turn_number}/6 ===")
+        guess: str = input_guess(len(secret))
+        emojis: str = emojified(guess, secret)
+        print(emojis)
+        if guess == secret:
+            victory = True
+        else:
+            victory = False
+            turn_number += 1
+    if victory is True:
+        print(f"You won in {turn_number}/6 turns!")
+    else:
+        print("X/6 - Sorry, try again tomorrow!")
 
         
+# the previously defined functions (contains_char, emojified, and input_guess)
+# serve as the building blocks of the main function that governs the wordle game
