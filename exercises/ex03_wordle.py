@@ -86,3 +86,7 @@ def main() -> None:
         
 # the previously defined functions (contains_char, emojified, and input_guess)
 # serve as the building blocks of the main function that governs the wordle game
+
+
+if __name__ == "__main__":
+    main()
