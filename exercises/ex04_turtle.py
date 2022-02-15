@@ -1,4 +1,10 @@
-"""EX04 - Valentine's Day Card."""
+"""EX04 - Valentine's Day Card.
+
+Line 28 and Line 72 utilize the
+turtle.write function. The while loop
+spanning lines 44-47 uses the
+turtle.circle function.
+"""
 
 __author__ = "730501608"
 
@@ -12,6 +18,7 @@ def main() -> None:
     date(love, 97.0, 120.0, 245, 4, 39)
     rose(love, -250.0, -100.0, 30, 232, 51, 51, 134, 12, 12)
     rose(love, -220.0, 20.0, 50, 251, 250, 79, 238, 152, 45)
+    rose(love, -190.0, 85.0, 20, 225, 139, 236, 161, 50, 176)
     card(love, -50.0, 45.0, 180, 31, 109, 255, 217, 237)
     note(love, 100.0, -150.0, 195, 29, 53)
     done()
