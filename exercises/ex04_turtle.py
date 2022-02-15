@@ -9,11 +9,23 @@ colormode(255)
 def main() -> None:
     """The entrypoint of my scene."""
     love: Turtle = Turtle()
+    date(love, 97.0, 120.0, 245, 4, 39)
     rose(love, -250.0, -100.0, 30, 232, 51, 51, 134, 12, 12)
     rose(love, -220.0, 20.0, 50, 251, 250, 79, 238, 152, 45)
     card(love, -50.0, 45.0, 180, 31, 109, 255, 217, 237)
     note(love, 100.0, -150.0, 195, 29, 53)
     done()
+
+
+def date(love: Turtle, x: float, y: float, p_red: int, p_green: int, p_blue: int) -> None:
+    """Announce the date for Valentine's Day."""
+    love.penup()
+    love.goto(x, y)
+    love.setheading(0.0)
+    love.pendown()
+    love.color(p_red, p_green, p_blue)
+    love.write("FEBRUARY 14", False, align="center", font=('Arial', 24, 'bold'))
+    love.hideturtle()
 
 
 def rose(love: Turtle, x: float, y: float, radius: int, p_red: int, p_green: int, p_blue: int, f_red: int, f_green: int, f_blue: int) -> None:
